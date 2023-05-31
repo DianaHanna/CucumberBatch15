@@ -28,6 +28,7 @@ public class CommonMethods extends PageInitializer {
         String browserType=ConfigReader.getPropertyValue("browserType");
         switch (browserType){
             case "Chrome":
+                //todo this code makes the project run in headless mode without launching the browser
                 ChromeOptions ops = new ChromeOptions();
                 ops.addArguments("--no-sandbox");
                 ops.addArguments("--remote-allow-origins=*");
